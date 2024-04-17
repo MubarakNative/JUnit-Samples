@@ -3,27 +3,34 @@ package com.mbexample.junit4example.basictest
 class AgeChecker {
     fun checkAge(age:Int): String{
         return when(age){
-            in 1..10 -> {
-                "You are children"
+            in 1 .. 11 -> {
+                "Child"
+            }
+            in 12..27 -> {
+                "Gen Z"
             }
 
-            in 10..25 -> {
-                "You are teen-ager"
+            in 28..43 -> {
+                "Millennial's"
             }
 
-            in 25 .. 35 -> {
-                "You are super"
+            in 44 .. 59 -> {
+                "Gen X"
             }
-            in 35 .. 45 -> {
-                "You are old"
-            }
-
-            in 45..55 -> {
-                "You are Elder old"
+            in 60 .. 69 -> {
+                "Generation Jones"
             }
 
-            in 55..100 -> {
-                "Very Old citizen"
+            in 70..78 -> {
+                "Boomers"
+            }
+
+            in 79..96 -> {
+                "Post War"
+            }
+
+            in 97 .. 102 -> {
+                "WWII"
             }
             else -> throw IllegalArgumentException("Invalid Age")
         }
